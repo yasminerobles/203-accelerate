@@ -22,6 +22,27 @@ get_header(); ?>
 			<?php endwhile; // end of the loop. ?>
 		</div><!-- .main-content -->
 	</div><!-- #primary -->
+	<section>
+		<h2 class="featured-headline">Featured Work</h2>
+
+			<?php query_posts('posts_per_page=3&post_type=case_studies'); ?>
+			<ul class="hp-studies">
+				<?php while ( have_posts() ) : the_post();	
+					$image_1 = get_field('image_1');
+					$size = "medium";
+					?>
+				
+					<li class="study">
+						<?php if($image_1) {
+							echo wp_get_attachment_image( $image_1, $size );
+						} ?>
+						<p class="hp-case-title"><?php the_title(); ?></p>
+					</li>
+						
+  				<?php endwhile; ?> 
+				<?php wp_reset_query(); ?>	
+				</ul>
+	</section>
 	<section class="recent-posts">
 		<div class="site-content">
 			<div class="blog-post">
@@ -30,8 +51,8 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 				<h3><?php the_title(); ?></h3>
        			<?php the_excerpt(); ?> 
-     			<?php endwhile; ?> 
-   				<?php wp_reset_query(); ?>
+  				<?php endwhile; ?> 
+				<?php wp_reset_query(); ?>
 			</div>
 		</div>
 	</section>

@@ -14,6 +14,9 @@ Text Domain:  accelerate-theme-child
     background: url("img/taxi-photo.jpg") no-repeat scroll right center / cover rgba(0, 0, 0, 0);
 
 }
+h1 {
+	font-family: 'Londrina Solid', cursive;
+}
 #masthead {
   background: none repeat scroll 0 0 #45ac9d;
 }
@@ -39,4 +42,114 @@ Text Domain:  accelerate-theme-child
 	font-weight: 700;
 	color: #45ac9d;
 	text-transform: uppercase;
+}
+
+/* CASE STUDIES INDIV */
+aside.case-study-sidebar {
+	float: left;
+	width: 30%;
+
+}
+div.case-study-images {
+	float:left;
+	width: 70%;
+	padding-left:20px;
+	margin-top: 5%;
+}
+@media screen and (max-width: 750px) {
+	aside.case-study-sidebar {
+		width:100%;
+	}
+	.case-study-images {
+		width:100%;
+	}
+	.case-study-images img {
+		width: 100%;
+		margin: auto;
+	}
+	div.case-study-images {
+		float:left;
+		width: 100%;
+	}
+}
+/* CASE STUDIES ARCHIVE*/
+@media (min-width: 768px){
+	.archive-main-content {
+    	padding: 2em 0em 0 0em;
+	}
+	
+}
+.archive-case-study {
+	display: inline-block;
+}
+div.case-study-images img {
+	width: 100%;
+	height: auto;
+}
+
+
+/* FOOTER ICON STYLES */
+
+.dashicons {
+	background-color: #333333;
+    border-radius: 50%;
+    padding: 0.2em;
+    color: white;
+	margin: 0 0.2em;
+}
+.social-media-menu {
+    list-style: none;
+	display: flex;
+}
+
+/* CONTACT FORM */
+@media (min-width: 768px){
+.main-content {
+    padding: 2em 5em 0 5em;
+}
+}
+h2 {
+    font-size: 1.5em;
+}
+.nf-form-content label {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+}
+.nf-form-content  {
+	padding: 0 !important;
+}
+.nf-form-fields-required {
+	display: none;
+}
+.ninja-forms-req-symbol {
+	display: none;
+}
+
+#nf-field-4 {
+    background: #45ac9d;
+	padding: 0px 80px;
+	float: right;
+}
+/* HOME PAGE CASE STUDIES */
+.featured-headline {
+	text-align: center;
+}
+.hp-studies {
+	display: flex;
+	list-style: none;
+	justify-content: space-evenly;
+	margin: 1em 0 1em 0em;
+}
+.hp-case-title {
+	text-align: center;
+}
+.study {
+	margin: 0 1em;
+}
+@media screen and (max-width: 400px) {
+	.hp-studies {
+		list-style: none;
+		margin: 1em 0 1em 0em;
+		display: grid;
+	}
 }
